@@ -43,7 +43,7 @@ def get_json_data_parsed(share_name, serial):
                                    # print(f"\033[36m{share_name}\033[0m\t\t\033[33m{share_value}\t\t{share_pts}\t\t{G_N_L}\033[0m Status code: \033[32m{response.status_code}\033[0m")
                                    tabs = "\t\t\t" if len(share_name) <= 9 else "\t\t"
                                    tbn_ = "\t\t" if len(str(share_value)) >= 8 else "\t\t\t"
-                                   print(f"[{serial}] \033[30;106m{share_name}\033[0m{tabs}{share_value}{tbn_}{share_pts}\t\t{G_N_L_} Status code: \033[37;44m{response.status_code}\033[0m")
+                                   print(f"[{serial}] \033[30;47m{share_name}\033[0m{tabs}{share_value}{tbn_}{share_pts}\t\t{G_N_L_} Status code: \033[37;44m{response.status_code}\033[0m")
 
                                    # print(f"Success to fetch data from {uri}\t\tStatus code: \033[32m{response.status_code}\033[0m")
                                    break
@@ -75,8 +75,8 @@ def convert_seconds(seconds):
     return f"\033[33mTook {minutes} minutes {remaining_seconds:02d} seconds\033[0m"
 
 if __name__=="__main__":
-     e_ = time.time()
      share_names = ['RELIANCE', 'NIFTYBEES', 'TATAMOTORS', 'TATAPOWER', 'TATASTEEL', 'TATAELXSI', 'TATACHEM', 'TATACONSUM', 'M&M', 'UNITDSPR', 'BSE', 'COLPAL', 'RELAXO', 'ASALCBR', 'IRCTC', 'PIDILITIND', 'TITAN', 'EICHERMOT', 'HEROMOTOCO', 'BAJAJ-AUTO', 'SENSEX', 'NIFTY_IT', 'INFY', 'TCS', 'TEJASNET', 'WIPRO', 'HCLTECH', 'TECHM', 'KPITTECH', 'CAMS', 'TANLA', 'ANGELONE', 'LTIM', 'ROUTE', 'DIXON', 'LATENTVIEW', 'AFFLE', 'BOSCHLTD', 'MCX', 'BHARTIARTL', 'SONATSOFTW', 'NEWGEN', 'HAPPSTMNDS', 'DEEPAKNTR', 'DEEPAKFERT', 'SRF', 'CHAMBLFERT', 'ROSSARI', 'ALKYLAMINE', 'SUMICHEM', 'AARTIIND', 'VALIANTORG', 'CLEAN', 'SUNPHARMA', 'CIPLA', 'LAURUSLABS', 'IEX', 'MGL', 'HDFCBANK', 'HDFCAMC', 'ICICIBANK', 'SBIN', 'SBICARD', 'KOTAKBANK', 'MUTHOOTFIN', 'BAJAJFINSV', 'CDSL', 'LICHSGFIN', 'LICI', 'HINDALCO', 'BALRAMCHIN', 'ASTRAL', 'PRINCEPIPE', 'UNOMINDA', 'ENDURANCE', 'BERGEPAINT', 'ASIANPAINT', 'ARE&M', 'EXIDEIND', 'VEDL', 'SUPREMEIND', 'HINDUNILVR', 'JUBLFOOD', 'MRF', 'BRITANNIA', 'APOLLOTYRE', 'MARICO', 'HAVELLS', 'ORIENTELEC', 'POLYCAB', 'BAJAJELEC', 'ULTRACEMCO', 'LT', 'NYKAA', 'OLECTRA', 'KAJARIACER', 'NIFTY_50', 'BALKRISIND', 'ANURAS']
+     e_ = time.time()
      print(len(share_names))
      serial:int = 1
      for share_name in share_names:

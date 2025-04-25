@@ -52,12 +52,12 @@ def save(data: dict):
 
         # Apply green fill if Gain/Loss is "GAIN" in the first section
         if row1[3] == "GAIN":
-            for col_idx in range(1, len(headers) + 1):
+            for col_idx in range(3, len(headers) + 1):
                 ws.cell(row=last_row, column=col_idx).fill = green_fill
 
         # Apply green fill if Gain/Loss is "GAIN" in the second section
         if row2[3] == "GAIN":
-            for col_idx in range(len(headers) + 2, len(headers) * 2 + 2):
+            for col_idx in range(len(headers) + 4, len(headers) * 2 + 2):
                 ws.cell(row=last_row, column=col_idx).fill = green_fill
 
     # Apply font and border to all filled cells
