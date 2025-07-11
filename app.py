@@ -38,7 +38,7 @@ def get_json_data_parsed(share_name, serial):
                                    share_pts = data_json.get("data", [])[0][0][0][5][1]
                                    share_pts = round(share_pts, 2)
                                    G_N_L = "LOSS" if share_pts < 0 else "GAIN"
-                                   G_N_L_ = "\033[37;42mGAIN\033[0m" if G_N_L == "GAIN" else "\033[37;41mLOSS\033[0m"
+                                   G_N_L_ = "\033[37;42mGAIN\033[0m" if G_N_L == "GAIN" else "LOSS"
                                    save_share_db(share_name, share_value, share_pts, G_N_L)
                                    # print(f"\033[36m{share_name}\033[0m\t\t\033[33m{share_value}\t\t{share_pts}\t\t{G_N_L}\033[0m Status code: \033[32m{response.status_code}\033[0m")
                                    tabs = "\t\t\t" if len(share_name) <= 9 else "\t\t"
