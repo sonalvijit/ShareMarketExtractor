@@ -43,7 +43,10 @@ def get_json_data_parsed(share_name, serial):
                                    # print(f"\033[36m{share_name}\033[0m\t\t\033[33m{share_value}\t\t{share_pts}\t\t{G_N_L}\033[0m Status code: \033[32m{response.status_code}\033[0m")
                                    tabs = "\t\t\t" if len(share_name) <= 9 else "\t\t"
                                    tbn_ = "\t\t" if len(str(share_value)) >= 8 else "\t\t\t"
-                                   print(f"[{serial}] \033[30;47m{share_name}\033[0m{tabs}{share_value}{tbn_}{share_pts}\t\t{G_N_L_} Status code: \033[37;44m{response.status_code}\033[0m")
+                                   if G_N_L == "GAIN":
+                                        print(f"\033[37;42m[{serial}] {share_name}{tabs}{share_value}{tbn_}{share_pts}\t\t{G_N_L_} \033[0mStatus code: \033[37;44m{response.status_code}\033[0m")
+                                   else:
+                                        print(f"[{serial}] \033[30;47m{share_name}\033[0m{tabs}{share_value}{tbn_}{share_pts}\t\t{G_N_L_} Status code: \033[37;44m{response.status_code}\033[0m")
 
                                    # print(f"Success to fetch data from {uri}\t\tStatus code: \033[32m{response.status_code}\033[0m")
                                    break
